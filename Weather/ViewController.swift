@@ -60,7 +60,7 @@ class ViewController: UIViewController {
     URL로 Http통신하여 날씨 정보를 가져오는 메서드
      */
     func getCurrentWeather(cityName: String){
-        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(cityName)&appid=1f0728df4cc5a4d34a0dd7036dafbc75") else { return }
+        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(cityName)&appid=") else { return }
         let session = URLSession(configuration: .default)
         session.dataTask(with: url){[weak self] data, response, error in
             let successRange = (200 ..< 300)
